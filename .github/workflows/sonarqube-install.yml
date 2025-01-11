@@ -1,4 +1,29 @@
-name: SonarQube Installation Workflow
+# name: SonarQube Installation Workflow
+
+# on:
+#   push:
+#     branches:
+#       - master
+
+# jobs:
+#   install-sonarqube:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#     - name: Checkout code
+#       uses: actions/checkout@v2
+
+#     - name: Install SonarQube
+#       uses: ./  # Use the current repository if the action is local
+
+#     - name: Start SonarQube Service
+#       run: |
+#         sudo systemctl start sonar
+#         sudo systemctl enable sonar
+#         sudo systemctl status sonar
+
+
+name: SonarQube Installation
 
 on:
   push:
@@ -14,7 +39,7 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Install SonarQube
-      uses: ./  # Use the current repository if the action is local
+      uses: ./Sonarqube-action  # This assumes your action is in the 'Sonarqube-action' folder
 
     - name: Start SonarQube Service
       run: |

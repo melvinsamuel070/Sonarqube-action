@@ -1,0 +1,7 @@
+
+### Explanation:
+- The **`action.yml`** file defines your action and uses a composite action that runs the `entrypoint.sh` script.
+- The **`entrypoint.sh`** file contains your SonarQube installation and configuration commands.
+- The **`README.md`** provides users with examples on how to use the action in their workflows.
+
+This setup will allow users to integrate the SonarQube installation action in their GitHub workflows seamlessly!

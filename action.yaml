@@ -1,0 +1,9 @@
+name: sonarqube-action
+description: Sonarqube installation action 
+author: melvinsamuel070
+runs:
+   using: composite
+   steps:
+      - name: Sonarqube installation
+        shell: bash
+        run: entrypoint.sh

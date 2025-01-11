@@ -28,7 +28,7 @@ name: Test SonarQube Action
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   test:

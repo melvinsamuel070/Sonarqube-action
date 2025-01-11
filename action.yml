@@ -4,9 +4,9 @@ author: melvinsamuel070
 runs:
    using: composite
    steps:
-      - name: Sonarqube installation
+      - name: install Sonarqube 
         shell: bash
-        run: entrypoint.sh
+        run: ./entrypoint.sh
 
 
 

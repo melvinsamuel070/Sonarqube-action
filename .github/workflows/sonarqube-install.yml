@@ -1,24 +1,19 @@
-name: SonarQube Installation
-
+name: Test SonarQube Action
 on:
   push:
     branches:
       - master
-  pull_request:
-    branches:
-      - master
-
 jobs:
-  install-sonarqube:
+  test:
+    name: Tester
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout Repository
+        uses: actions/checkout@v2
 
-    - name: Run SonarQube Installation
-      uses: ./Sonarqube-action  # Reference the local action
+      - name: Run SonarQube Installation
+        uses: ./Sonarqube-action  # Reference the local action
 
-    - name: Verify SonarQube is Running
-      run: |
-        sudo systemctl status sonar
+      - name: Check SonarQube service status
+        run: sudo systemctl status sonar

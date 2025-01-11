@@ -1,0 +1,22 @@
+name: Test SonarQube Installation
+
+on:
+  push:
+    branches:
+        - master
+jobs:
+  install-sonarqube:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install SonarQube
+      uses: ./sonarqube-action@v1  # Replace with your GitHub Action
+
+    - name: Start SonarQube Service
+      run: |
+        sudo systemctl start sonar
+        sudo systemctl enable sonar
+        sudo systemctl status sonar

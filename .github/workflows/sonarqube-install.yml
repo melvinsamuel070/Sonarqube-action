@@ -39,7 +39,8 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Install SonarQube
-      uses: ./Sonarqube-action  # This assumes your action is in the 'Sonarqube-action' folder
+      uses: melvinsamuel070/Sonarqube-action@v1  # Replace with the correct username and action name
+  # This assumes your action is in the 'Sonarqube-action' folder
 
     - name: Start SonarQube Service
       run: |

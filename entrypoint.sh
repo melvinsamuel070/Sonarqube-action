@@ -1,7 +1,7 @@
 # /bin/bash
 
 # sonarqube installation
-
+set -e
 sudo apt-get update
 
 sudo wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.9.0.65466.zip

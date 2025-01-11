@@ -1,9 +1,33 @@
-name: sonarqube-action
-description: Sonarqube installation action 
+# name: sonarqube-action
+# description: Sonarqube installation action 
+# author: melvinsamuel070
+# runs:
+#    using: composite
+#    steps:
+#       - name: Sonarqube installation
+#         shell: bash
+#         run: entrypoint.sh
+
+
+
+
+name: SonarQube Action
+description: SonarQube installation action
 author: melvinsamuel070
+inputs:
+  sonarqube_version:
+    description: 'Version of SonarQube to install'
+    required: true
+    default: '9.9.0.65466'  # Example version, you can change this
+
 runs:
-   using: composite
-   steps:
-      - name: Sonarqube installation
-        shell: bash
-        run: entrypoint.sh
+  using: 'composite'
+  steps:
+    - name: Checkout the repository
+      uses: actions/checkout@v2
+
+    - name: Set up SonarQube installation
+      shell: bash
+      run: |
+        chmod +x entrypoint.sh  # Ensure the script is executable
+        ./entrypoint.sh

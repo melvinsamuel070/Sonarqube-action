@@ -39,7 +39,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Install SonarQube
-        uses: melvinsamuel070/sonarqube-action@v1
+        uses: ./sonarqube-action@v1
         with:
           sonarqube_version: '9.9.0.65466'
 

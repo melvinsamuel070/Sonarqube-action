@@ -40,8 +40,6 @@ jobs:
 
     - name: Install SonarQube
       uses: ./sonarqube-action@v1
-      with:
-        sonarqube_version: '9.9.0.65466'  # Optional: specify the SonarQube version
 
     - name: Start SonarQube Service
       run: |
